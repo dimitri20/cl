@@ -25,20 +25,25 @@ window.addEventListener('click', function(e){
 
 
 var i = 0;
-function  changeImage(){
-  i%=4;
-  console.log("changed" + i);
-  var backgroundImage = document.getElementsByClassName("background_image");
-  for(var k = 0; i < 4; k++){
-    if(k != i){
-      backgroundImage[i].classList.add("hide");
-    }
-  }
-  backgroundImage[i].classList.remove("hide");
-  i+=1;
+const size = window.innerWidth;
+const backgroundImage = document.getElementsByClassName("background_image");
+const imageNum = backgroundImage.length;
+document.getElementsByClassName("imagesContainer")[0].style.width = imageNum*100 + '%';
 
+function  changeImage(){
+  if (i == imageNum) {
+    for(var k = 0; k < imageNum; k++){
+      backgroundImage[k].style.transition = "none";
+      backgroundImage[k].style.transform = 'translateX(' + (size * k) + 'px)';
+    }
+    i = 0;
+  }
+
+  for(var k = 0; k < imageNum; k++){
+    backgroundImage[k].style.transition = "transform 1.5s ease-in-out";
+    backgroundImage[k].style.transform = 'translateX(' + (-size * i) + 'px)';
+  }
+  i++;
 }
 
-setInterval(changeImage, 3000);
-
-
+setInterval(changeImage, 6000);

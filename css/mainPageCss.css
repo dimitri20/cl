@@ -39,14 +39,24 @@ header > nav{
 }
 
 .background_image{
-  width: 100vw;
-  height: 100%;
-  top: 0;
-  position: absolute;
+  width: 100%;
+  height: 625px;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 
+}
+
+.imagesContainer{
+
+  height: 100%;
+  display: flex;
+}
+
+.carousel-container{
+  width: 100vw;
+  overflow: hidden;
 }
 
 #navUl{
