@@ -1,8 +1,12 @@
 .display-inline-block{
   display: inline-block;
 }
-
-
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
 header{
   width: 100vw;
   height: 100vh;
@@ -91,7 +95,7 @@ header > img{
   width: 32px;
 }
 
-.dropdownMenu_language{
+#dropdownMenu_language{
   display: none;
   position: relative;
   background-color: #1a1a1a;
@@ -103,13 +107,13 @@ header > img{
   z-index: 20;
 }
 
-#dropdown_content{
+#dropDown_ul{
   display: block;
   position: absolute;
   z-index: 1;
 }
 
-#dropdown_content>li>a{
+#dropDown_ul>li>a{
   margin-left: 9px;
   margin-top: 5px;
   color: black;
@@ -118,15 +122,15 @@ header > img{
   font-size: 17px;
   display: block;
 }
-#dropdown_content>li>a:hover{
+#dropDown_ul>li>a:hover{
   text-decoration: none;
 }
 
-#dropdown_content>li>a:hover{
+#dropDown_ul>li>a:hover{
   text-decoration: none;
 
 }
-#dropdown_content:hover{
+#dropDown_ul:hover{
   display: block;
 }
 
@@ -158,7 +162,7 @@ header > img{
   margin-left: 10px;
 }
 
-.searchLabel{
+#searchLabel{
   display: none;
   width: 100vw;
   height: 80px;

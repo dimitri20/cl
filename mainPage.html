@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="mainPageCss.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>კლინიკის სახელწოდება</title>
+    <script src="front.js"></script>
   </head>
   <body>
       <header>
@@ -13,30 +14,30 @@
         <img src="national-cancer-institute-1c8sj2IO2I4-unsplash.jpg" alt="">
         <div id="imgcontainer"></div>
 
-        <div class="searchLabel">
+        <div id="searchLabel">
           <form class="Search display-inline-block" action="index.html" method="post">
             <input type="text" name="" value="" placeholder="ძებნა..." id="searchInput">
           </form>
-          <a href="#"><img src="close.svg" alt="" id="closeSearchBar"></a>
+          <a href="#" onclick="appearSearch()"><img src="close.svg" alt="" id="closeSearchBar"></a>
         </div>
 
-        <nav>
+        <nav class="navigation">
           <span id="companyLogo">ლოგო</span>
           <ul id="navUl">
-            <li class="display-inline-block"><a href="#">ინფორმაცია</a></li>
+            <li class="display-inline-block"><a href="#" >ინფორმაცია</a></li>
             <li class="display-inline-block"><a href="#">კონტაქტი</a></li>
             <li class="display-inline-block">
-              <a href="#"><img src="search.svg" alt="" id="searchImage"></a>
+              <a href="#" onclick="appearSearch()" id="searchImageaTag"><img src="search.svg" alt="" id="searchImage"></a>
               <span id="separator">|</span>
-              <a href="#" id="langBar"><span>GE</span></a>
-              <a href="#" id="langBar_Arrow"><span class="triangle-down"></span></a>
-              <div class="dropdownMenu_language">
-                <span class="triangle-up"></span>
-                <ul id="dropdown_content">
-                  <li><a href="#">EN</a></li>
-                  <li><a href="#">RU</a></li>
-                  <li><a href="#">FR</a></li>
-                </ul>
+              <a href="#" id="langBar" onclick="appearDropdown()" class="closeDropdownBar"><span>GE</span></a>
+              <a href="#" id="langBar_Arrow" onclick="appearDropdown()" class="closeDropdownBar"><span class="triangle-down"></span></a>
+              <div id="dropdownMenu_language">
+                  <span class="triangle-up"></span>
+                  <ul id="dropDown_ul">
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">FR</a></li>
+                  </ul>
               </div>
             </li>
             <li class="display-inline-block"><a href="#"><span><img src="user.svg" id="userImage"></span></a></li>
@@ -44,5 +45,7 @@
         </nav>
 
       </header>
+
+
   </body>
 </html>
