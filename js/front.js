@@ -22,3 +22,23 @@ window.addEventListener('click', function(e){
     document.getElementById("searchLabel").classList.remove("show")
   }
 });
+
+
+var i = 0;
+function  changeImage(){
+  i%=4;
+  console.log("changed" + i);
+  var backgroundImage = document.getElementsByClassName("background_image");
+  for(var k = 0; i < 4; k++){
+    if(k != i){
+      backgroundImage[i].classList.add("hide");
+    }
+  }
+  backgroundImage[i].classList.remove("hide");
+  i+=1;
+
+}
+
+setInterval(changeImage, 3000);
+
+

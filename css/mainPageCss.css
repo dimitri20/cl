@@ -4,6 +4,7 @@
 .show{
   display: block;
 }
+
 .hide{
   display: none;
 }
@@ -32,22 +33,21 @@ header > nav{
   z-index: 1;
 }
 
-header{
+#header{
   width: 100vw;
-  height: calc(100vh);
-  background-image: url(../images/3.jpg);
+  height: auto;
+}
+
+.background_image{
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover;
-}
 
-.backgroundImage{
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  z-index: -1;
 }
-
 
 #navUl{
   float: right;
