@@ -32,12 +32,22 @@ header > nav{
   z-index: 1;
 }
 
-header > img{
+header{
+  width: 100vw;
+  height: calc(100vh);
+  background-image: url(../images/3.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.backgroundImage{
   width: 100vw;
   height: 100vh;
   position: relative;
   z-index: -1;
 }
+
 
 #navUl{
   float: right;
