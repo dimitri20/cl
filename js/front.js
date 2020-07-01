@@ -24,11 +24,17 @@ window.addEventListener('click', function(e){
 });
 
 
+
+
 var i = 0;
 const size = window.innerWidth;
 const backgroundImage = document.getElementsByClassName("background_image");
 const imageNum = backgroundImage.length;
+const carouselCircle = document.getElementsByClassName("carouselCircle");
 document.getElementsByClassName("imagesContainer")[0].style.width = imageNum*100 + '%';
+carouselCircle[0].style.border = '1px solid #ffffff';
+
+
 
 function  changeImage(){
   if (i == imageNum) {
@@ -42,8 +48,19 @@ function  changeImage(){
   for(var k = 0; k < imageNum; k++){
     backgroundImage[k].style.transition = "transform 1.5s ease-in-out";
     backgroundImage[k].style.transform = 'translateX(' + (-size * i) + 'px)';
+    if (k != i) {
+      carouselCircle[k].style.border = 'none';
+    }
   }
+  carouselCircle[i].style.border = '1px solid #ffffff';
+
   i++;
 }
 
-setInterval(changeImage, 6000);
+function currentImage(n){
+  i = n;
+  return n;
+}
+
+var slideShow = setInterval(changeImage, 5000);
+setInterval(changeImage, 5000);
