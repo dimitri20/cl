@@ -3,7 +3,6 @@
 <head>
 	<title>პაციენტის პორტალი</title>
 	<link rel="stylesheet" type="text/css" href="css/patientPortal.css">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
@@ -30,18 +29,97 @@
 				    </li>
 				    <li class="display-inline-block"><a href="#"><span><img src="images/user.svg" id="userImage"></span></a></li>
 				</ul>
-				
+
 			</nav>
 		</div>
-		
+
 
 	</header>
 
-	<section id="personalInfo">
-		
+	<section class="infoSection" id="personalInfo">
+		<div class="personImageContainer"></div>
+
+		<div class="personalInfofirstCol">
+			<span>სახელი: <span id="personName"></span>undefined</span>
+			<span>გვარი: <span id="personName"></span>undefined</span>
+			<span>სქესი: <span id="personSex"></span>undefined</span>
+			<span>ასაკი: <span id="personAge"></span>undefined</span>
+			<span>პირადი ნომერი(პ/ნ): <span id="personID"></span>undefined</span>
+			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
+		</div>
+
+		<div class="personalInfofirstCol">
+			<span>სახელი: <span id="personName"></span>undefined</span>
+			<span>გვარი: <span id="personName"></span>undefined</span>
+			<span>სქესი: <span id="personSex"></span>undefined</span>
+			<span>ასაკი: <span id="personAge"></span>undefined</span>
+			<span>პირადი ნომერი(პ/ნ): <span id="personID"></span>undefined</span>
+			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
+		</div>
+
+		<div class="personalInfofirstCol">
+			<span>სახელი: <span id="personName"></span>undefined</span>
+			<span>გვარი: <span id="personName"></span>undefined</span>
+			<span>სქესი: <span id="personSex"></span>undefined</span>
+			<span>ასაკი: <span id="personAge"></span>undefined</span>
+			<span>პირადი ნომერი(პ/ნ): <span id="personID"></span>undefined</span>
+			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
+		</div>
+
+		<div class="personalInfofirstCol">
+			<span>სახელი: <span id="personName"></span>undefined</span>
+			<span>გვარი: <span id="personName"></span>undefined</span>
+			<span>სქესი: <span id="personSex"></span>undefined</span>
+			<span>ასაკი: <span id="personAge"></span>undefined</span>
+			<span>პირადი ნომერი(პ/ნ): <span id="personID"></span>undefined</span>
+			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
+		</div>
+
 	</section>
 
+	<section class="infoSection" id="laboratoryResearch">
+		<span class="sectionTitle">ლაბორატორიული კვლევის პასუხები</span>
+		<a href="#"><div class="dropDownArrow"></div></a>
+	</section>
 
-	<script type="text/javascript" src="js/front.js"></script>
+	<section class="infoSection" id="laboratoryResearch">
+		<span class="sectionTitle">სამედიცინო დიაგნოზები</span>
+		<a href="#"><div class="dropDownArrow"></div></a>
+	</section>
+
+	<section class="infoSection" id="laboratoryResearch">
+		<span class="sectionTitle">ექიმის დანიშნულებები</span>
+		<a href="#"><div class="dropDownArrow"></div></a>
+	</section>
+
+	<section class="infoSection" id="laboratoryResearch">
+		<span class="sectionTitle">ინფორმაცია ალერგიების შესახებ</span>
+		<a href="#"><div class="dropDownArrow"></div></a>
+	</section>
+
+	<section class="infoSection" id="laboratoryResearch">
+		<span class="sectionTitle">ინფორმაცია იმუნოლოგიური აცრების შესახებ</span>
+		<a href="#"><div class="dropDownArrow"></div></a>
+	</section>
+
+	<script type="text/javascript">
+		function appearDropdown(){
+			document.getElementById("dropdownMenu_language").classList.toggle("show");
+		}
+
+		function infoSectionDropdown(){
+			
+		}
+
+		window.addEventListener('click', function(e){
+			var ignoreByClass = document.getElementsByClassName('closeDropdownBar');
+			if(document.getElementById('dropdownMenu_language').contains(e.target) || ignoreByClass[0].contains(e.target) || ignoreByClass[1].contains(e.target)){
+
+			} else {
+				document.getElementById("dropdownMenu_language").classList.remove("show");
+			}
+
+		});
+	</script>
 </body>
 </html>
