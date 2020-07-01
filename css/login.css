@@ -5,7 +5,7 @@ body {
 form {
   border: 3px solid #f1f1f1;
 }
-input {
+.loginInput {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -37,10 +37,14 @@ label {
   font-size: 14px;
 }
 
-#logIn {
-  width: 400px;
+#logInInputContainer {
   height: auto;
+  margin-top: 50px;
+}
+
+
+#logInInit{
+  width: 400px;
   display: block;
   margin: 0 auto;
-  margin-top: 150px;
 }

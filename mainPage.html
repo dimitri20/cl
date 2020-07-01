@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/mainPageCss.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>კლინიკის სახელწოდება</title>
   </head>
@@ -12,14 +13,14 @@
         <div class="carousel-container">
           <div class="carousel-circles-container">
             <ul>
-              <a href="#" onclick="currentImage(0)"<li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
-              <a href="#" onclick="currentImage(1)"><li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
-              <a href="#" onclick="currentImage(2)"><li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
-              <a href="#" onclick="currentImage(3)"><li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
+              <a href="#"><li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
+              <a href="#"><li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
+              <a href="#"><li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
+              <a href="#"><li class="display-inline-block carouselCircle" ><span class="carouselCircle-Inside"></span></li></a>
             </ul>
           </div>
           <div class="imagesContainer">
-            <div class="background_image" style="background-image: url('images/0.jpg');"></div>
+            <div class="background_image" style="background-image: url('images/0.jpg');"> </div>
             <div class="background_image" style="background-image: url('images/1.jpg');"></div>
             <div class="background_image" style="background-image: url('images/2.jpg');"></div>
             <div class="background_image" style="background-image: url('images/3.jpg');"></div>
@@ -43,8 +44,8 @@
             <li class="display-inline-block"><a href="#" >ინფორმაცია</a></li>
             <li class="display-inline-block"><a href="#">კონტაქტი</a></li>
             <li class="display-inline-block">
-              <a href="#" onclick="appearSearch()" id="searchImageaTag"><img src="images/search.svg" alt="" id="searchImage"></a>
-              <span id="separator">|</span>
+              <a href="#" onclick="appearSearch()" id="searchImageaTag"><img src="images/search.svg" alt="" class="searchImage"></a>
+              <span class="separator">|</span>
               <a href="#" id="langBar" onclick="appearDropdown()" class="closeDropdownBar"><span>GE</span></a>
               <a href="#" id="langBar_Arrow" onclick="appearDropdown()" class="closeDropdownBar"><span class="triangle-down"></span></a>
               <div id="dropdownMenu_language">

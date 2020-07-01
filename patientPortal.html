@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>პაციენტის პორტალი</title>
+	<link rel="stylesheet" type="text/css" href="css/patientPortal.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<header>
+		<div id="headerMainDiv">
+			<div id="companyName">კლინიკის სახელი</div>
+
+			<nav id="navigation">
+				<ul id="navUl">
+					<li class="display-inline-block">
+				      <a href="#" onclick="appearSearch()" id="searchImageaTag"><img src="images/search.svg" alt="" class="searchImage"></a>
+				      <span class="separator">|</span>
+				      <a href="#" id="langBar" onclick="appearDropdown()" class="closeDropdownBar"><span>GE</span></a>
+				      <a href="#" id="langBar_Arrow" onclick="appearDropdown()" class="closeDropdownBar"><span class="triangle-down"></span></a>
+				      <div id="dropdownMenu_language">
+				          <span class="triangle-up"></span>
+				          <ul id="dropDown_ul">
+				            <li><a href="#">EN</a></li>
+				            <li><a href="#">RU</a></li>
+				            <li><a href="#">FR</a></li>
+				          </ul>
+				      </div>
+				    </li>
+				    <li class="display-inline-block"><a href="#"><span><img src="images/user.svg" id="userImage"></span></a></li>
+				</ul>
+				
+			</nav>
+		</div>
+		
+
+	</header>
+
+	<section id="personalInfo">
+		
+	</section>
+
+
+	<script type="text/javascript" src="js/front.js"></script>
+</body>
+</html>

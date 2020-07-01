@@ -57,10 +57,5 @@ function  changeImage(){
   i++;
 }
 
-function currentImage(n){
-  i = n;
-  return n;
-}
 
-var slideShow = setInterval(changeImage, 5000);
 setInterval(changeImage, 5000);
