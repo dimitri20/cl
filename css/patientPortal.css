@@ -2,6 +2,10 @@
 	display:inline-block;
 }
 
+body{
+	overflow-x: hidden;
+}
+
 /*https://stackoverflow.com/questions/13658236/get-clicked-class-index-javascript*/
 
 .show{
@@ -140,27 +144,39 @@
 	height: 250px;
 }
 
+#personalInfo:hover{
+	cursor: auto;
+}
+
 .infoSection{
+	display: flex;
 	margin: 0 auto;
 	margin-top: 20px;
 	width: 98%;
 	border: 1px solid #ccc;
 	border-radius: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	display: flex;
+	height: 40px;
+	transition: height 0.7s ease-in-out;
+}
+
+.dropDownInfo{
+	height: 250px;
 }
 
 .infoSection:hover{
 	cursor: pointer;
 }
 .personImageContainer{
-	width: 190px;
-	max-height: 190px;
-	margin-top: 30px;
-	margin-left: 30px;
+	width: 160px;
+  height: 213px;
+  margin-top: 16px;
+  margin-left: 40px;
+	margin-right: 10px;
 	background-image: url("../images/person.png");
-	background-size: cover;
+	background-size: 160px;
 	background-repeat: no-repeat;
+	background-position: bottom;
 	border: 1px solid #ccc;
 }
 

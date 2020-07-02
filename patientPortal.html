@@ -77,27 +77,27 @@
 
 	</section>
 
-	<section class="infoSection" id="laboratoryResearch">
+	<section class="infoSection" id="laboratory_research_answers" onclick="reply_click_id(this.id)">
 		<span class="sectionTitle">ლაბორატორიული კვლევის პასუხები</span>
 		<a href="#"><div class="dropDownArrow"></div></a>
 	</section>
 
-	<section class="infoSection" id="laboratoryResearch">
+	<section class="infoSection" id="medical_diagnoses" onclick="reply_click_id(this.id)">
 		<span class="sectionTitle">სამედიცინო დიაგნოზები</span>
 		<a href="#"><div class="dropDownArrow"></div></a>
 	</section>
 
-	<section class="infoSection" id="laboratoryResearch">
+	<section class="infoSection" id="doctor's_prescriptions" onclick="reply_click_id(this.id)">
 		<span class="sectionTitle">ექიმის დანიშნულებები</span>
 		<a href="#"><div class="dropDownArrow"></div></a>
 	</section>
 
-	<section class="infoSection" id="laboratoryResearch">
+	<section class="infoSection" id="allergie_info" onclick="reply_click_id(this.id)">
 		<span class="sectionTitle">ინფორმაცია ალერგიების შესახებ</span>
 		<a href="#"><div class="dropDownArrow"></div></a>
 	</section>
 
-	<section class="infoSection" id="laboratoryResearch">
+	<section class="infoSection" id="Immunological_vaccinations" onclick="reply_click_id(this.id)">
 		<span class="sectionTitle">ინფორმაცია იმუნოლოგიური აცრების შესახებ</span>
 		<a href="#"><div class="dropDownArrow"></div></a>
 	</section>
@@ -107,8 +107,8 @@
 			document.getElementById("dropdownMenu_language").classList.toggle("show");
 		}
 
-		function infoSectionDropdown(){
-			
+		function reply_click_id(clicked_id){
+			document.getElementById(clicked_id).classList.toggle("dropDownInfo");
 		}
 
 		window.addEventListener('click', function(e){
