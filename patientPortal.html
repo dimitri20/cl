@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/patientPortal.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<header>
@@ -39,7 +40,7 @@
 	<section class="infoSection" id="personalInfo">
 		<div class="personImageContainer"></div>
 
-		<div class="personalInfofirstCol">
+		<div class="personalInfoCol" id="personalInfoCol_first_child">
 			<span>სახელი: <span id="personName"></span>undefined</span>
 			<span>გვარი: <span id="personName"></span>undefined</span>
 			<span>სქესი: <span id="personSex"></span>undefined</span>
@@ -48,7 +49,7 @@
 			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
 		</div>
 
-		<div class="personalInfofirstCol">
+		<div class="personalInfoCol">
 			<span>სახელი: <span id="personName"></span>undefined</span>
 			<span>გვარი: <span id="personName"></span>undefined</span>
 			<span>სქესი: <span id="personSex"></span>undefined</span>
@@ -57,7 +58,7 @@
 			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
 		</div>
 
-		<div class="personalInfofirstCol">
+		<div class="personalInfoCol">
 			<span>სახელი: <span id="personName"></span>undefined</span>
 			<span>გვარი: <span id="personName"></span>undefined</span>
 			<span>სქესი: <span id="personSex"></span>undefined</span>
@@ -66,7 +67,7 @@
 			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
 		</div>
 
-		<div class="personalInfofirstCol">
+		<div class="personalInfoCol">
 			<span>სახელი: <span id="personName"></span>undefined</span>
 			<span>გვარი: <span id="personName"></span>undefined</span>
 			<span>სქესი: <span id="personSex"></span>undefined</span>
@@ -75,41 +76,85 @@
 			<span>ტელ. ნომერი: <span id="personPhoneNumber"></span>undefined</span>
 		</div>
 
+
+		<a href="#" id="dropDownArrowFirstSectioncontainer"><div class="dropDownArrow" id="dropDownArrowFirstSection"></div></a>
 	</section>
 
 	<section class="infoSection" id="laboratory_research_answers" onclick="reply_click_id(this.id)">
-		<span class="sectionTitle">ლაბორატორიული კვლევის პასუხები</span>
-		<a href="#"><div class="dropDownArrow"></div></a>
+		<div class="sectionTitleContainer">
+			<span class="sectionTitle">ლაბორატორიული კვლევის პასუხები</span>
+			<a href="#" class="dropDownArrowContainer"><div class="dropDownArrow"></div></a>
+		</div>
+
+		<div class="sectionBody">
+		</div>
 	</section>
 
 	<section class="infoSection" id="medical_diagnoses" onclick="reply_click_id(this.id)">
-		<span class="sectionTitle">სამედიცინო დიაგნოზები</span>
-		<a href="#"><div class="dropDownArrow"></div></a>
+		<div class="sectionTitleContainer">
+			<span class="sectionTitle">სამედიცინო დიაგნოზები</span>
+			<a href="#" class="dropDownArrowContainer"><div class="dropDownArrow"></div></a>
+		</div>
+
 	</section>
 
 	<section class="infoSection" id="doctor's_prescriptions" onclick="reply_click_id(this.id)">
-		<span class="sectionTitle">ექიმის დანიშნულებები</span>
-		<a href="#"><div class="dropDownArrow"></div></a>
+		<div class="sectionTitleContainer">
+			<span class="sectionTitle">ექიმის დანიშნულებები</span>
+			<a href="#" class="dropDownArrowContainer"><div class="dropDownArrow"></div></a>
+		</div>
+
 	</section>
 
 	<section class="infoSection" id="allergie_info" onclick="reply_click_id(this.id)">
-		<span class="sectionTitle">ინფორმაცია ალერგიების შესახებ</span>
-		<a href="#"><div class="dropDownArrow"></div></a>
+		<div class="sectionTitleContainer">
+			<span class="sectionTitle">ინფორმაცია ალერგიების შესახებ</span>
+			<a href="#" class="dropDownArrowContainer"><div class="dropDownArrow"></div></a>
+		</div>
+
 	</section>
 
 	<section class="infoSection" id="Immunological_vaccinations" onclick="reply_click_id(this.id)">
-		<span class="sectionTitle">ინფორმაცია იმუნოლოგიური აცრების შესახებ</span>
-		<a href="#"><div class="dropDownArrow"></div></a>
+		<div class="sectionTitleContainer">
+			<span class="sectionTitle">ინფორმაცია იმუნოლოგიური აცრების შესახებ</span>
+			<a href="#" class="dropDownArrowContainer"><div class="dropDownArrow"></div></a>
+		</div>
+
 	</section>
 
 	<script type="text/javascript">
+
+		if (window.matchMedia("(max-width: 375px)").matches) {
+			document.getElementById("personalInfo").setAttribute('onclick', 'personalInfo_onclick()');
+
+			for (var i = 0; i < document.getElementsByClassName("personalInfoCol").length; i++) {
+				document.getElementsByClassName("personalInfoCol")[i].classList.add('hide');
+			}
+			document.getElementsByClassName("personalInfoCol")[0].classList.remove('hide');
+
+			for (var i = 0; i < document.getElementsByClassName("sectionTitle").length; i++) {
+				console.log(i);
+				document.getElementsByClassName("sectionTitleContainer")[i].style.height = document.getElementsByClassName("sectionTitle")[i].offsetHeight + 'px';
+			}
+		}
+
+
+		function personalInfo_onclick(){
+			for (var i = 0; i < document.getElementsByClassName("personalInfoCol").length; i++) {
+				document.getElementsByClassName("personalInfoCol")[i].classList.toggle('hide');
+		}
+
+	}
 		function appearDropdown(){
 			document.getElementById("dropdownMenu_language").classList.toggle("show");
 		}
 
 		function reply_click_id(clicked_id){
 			document.getElementById(clicked_id).classList.toggle("dropDownInfo");
+			console.log("mad");
 		}
+
+
 
 		window.addEventListener('click', function(e){
 			var ignoreByClass = document.getElementsByClassName('closeDropdownBar');
@@ -120,6 +165,8 @@
 			}
 
 		});
+
+
 	</script>
 </body>
 </html>

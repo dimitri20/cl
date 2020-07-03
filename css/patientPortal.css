@@ -60,6 +60,10 @@ body{
 	border-top: 4px solid #f1f1f1;
 }
 
+.sectionTitleContainer{
+	width: 100%;
+}
+
 #dropdownMenu_language{
   display: none;
   position: relative;
@@ -142,6 +146,7 @@ body{
 
 #personalInfo{
 	height: 250px;
+	padding: 20px;
 }
 
 #personalInfo:hover{
@@ -164,15 +169,17 @@ body{
 	height: 250px;
 }
 
+#dropDownArrowFirstSectioncontainer{
+	display: none;
+}
+
 .infoSection:hover{
 	cursor: pointer;
 }
 .personImageContainer{
 	width: 160px;
   height: 213px;
-  margin-top: 16px;
-  margin-left: 40px;
-	margin-right: 10px;
+	margin: auto;
 	background-image: url("../images/person.png");
 	background-size: 160px;
 	background-repeat: no-repeat;
@@ -180,13 +187,13 @@ body{
 	border: 1px solid #ccc;
 }
 
-.personalInfofirstCol{
-	margin-top: 25px;
+.personalInfoCol{
+	margin: auto;
 	margin-left: 60px;
 	display: flex;
 	flex-direction: column;
 }
-.personalInfofirstCol > span {
+.personalInfoCol > span {
 	margin-top: 10px;
 	font-family: "opensans-bold";
 	font-size: 15px;
@@ -208,9 +215,84 @@ body{
 }
 
 .sectionTitle{
+	position: absolute;
 	margin-left: 30px;
 	margin-top: 8px;
 	font-family: "opensans-bold";
 	font-size: 15px;
 	font-weight: bold;
+}
+
+
+@media screen and (max-width: 375px) {
+	#personImageContainer{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.infoSection{
+		width: 90%;
+		height: 65px;
+		padding: 15px;
+		height: auto;
+	}
+
+	#personalInfo{
+		flex-direction: column;
+		height: auto;
+		text-align: left;
+		transition: height 0.7s ease-in-out;
+	}
+
+	.sectionTitle{
+		font-size: 12px;
+		position: absolute;
+		width: 90%;
+		left: 0;
+		margin-left: 0px;
+		margin-bottom: auto;
+    margin-top: auto;
+		bottom: 0px;
+		top: 0px;
+		height: fit-content;
+	}
+
+	.sectionTitleContainer{
+		position: relative;
+    padding: 10px;
+	}
+	.personalInfoCol{
+		margin-top: 30px;
+	}
+
+	#personalInfoCol_first_child{
+		display: inherit;
+	}
+
+	.dropDownArrow{
+		position: static;
+		margin: 0px;
+	}
+
+	.dropDownArrowContainer{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		bottom: 50%;
+	}
+
+	#dropDownArrowFirstSection{
+		margin: auto;
+		position: static;
+	}
+
+	#dropDownArrowFirstSectioncontainer{
+		display: inherit;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+
+	.sectionBody{
+
+	}
 }
